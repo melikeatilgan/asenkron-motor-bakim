@@ -1,0 +1,45 @@
+#VRML V2.0 utf8
+# EA DOGM128-6 - basitlestirilmis gorsel model
+# Basitlestirilmis govde; mekanik kullanim icin degil
+
+Transform {
+  translation 8.5020 -9.6555 0.3150
+  children [
+    Shape {
+      appearance Appearance { material Material {
+        diffuseColor 0.090 0.110 0.130
+        specularColor 0.250 0.250 0.250
+        shininess 0.25
+      } }
+      geometry Box { size 17.7165 21.6535 0.6299 }
+    }
+  ]
+}
+
+Transform {
+  translation 8.5020 -9.6555 1.2598
+  children [
+    Shape {
+      appearance Appearance { material Material {
+        diffuseColor 0.200 0.240 0.260
+        specularColor 0.450 0.450 0.450
+        shininess 0.45
+      } }
+      geometry Box { size 16.5354 14.1732 1.2598 }
+    }
+  ]
+}
+
+Transform {
+  translation 8.5020 -9.6555 1.9193
+  children [
+    Shape {
+      appearance Appearance { material Material {
+        diffuseColor 0.620 0.720 0.550
+        specularColor 0.100 0.100 0.100
+        shininess 0.10
+      } }
+      geometry Box { size 12.5984 9.8425 0.0591 }
+    }
+  ]
+}

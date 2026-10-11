@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<title>Motor Arıza Saha Kartı</title>
+<style>
+  @page { size: 105mm 148mm; margin: 0; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #888;
+         color: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .kart { width: 105mm; height: 148mm; background: #fff; padding: 5mm;
+          page-break-after: always; position: relative; overflow: hidden;
+          margin: 0 auto 6mm auto; }
+  .kart:last-child { page-break-after: auto; }
+
+  .bas { border-bottom: 1.4pt solid #000; padding-bottom: 1.4mm; margin-bottom: 2mm; }
+  .bas h1 { font-size: 10pt; margin: 0; letter-spacing: .3px; }
+  .bas .s { font-size: 5.9pt; color: #444; margin-top: .5mm; letter-spacing: .2px; }
+  .plaka { font-size: 5.7pt; background: #000; color: #fff; padding: .9mm 1.4mm;
+           margin-bottom: 2mm; letter-spacing: .1px; }
+
+  .blok { border: .7pt solid #000; margin-bottom: 1.8mm; }
+  .bb { background: #000; color: #fff; font-size: 7.4pt; font-weight: bold;
+        padding: .9mm 1.4mm; letter-spacing: .5px; display: flex;
+        justify-content: space-between; }
+  .bb em { font-style: normal; font-weight: normal; font-size: 5.8pt; opacity: .85; }
+  .bi { padding: 1.2mm 1.4mm; font-size: 6.2pt; line-height: 1.45; }
+  ol { margin: 0; padding-left: 4.2mm; }
+  li { margin-bottom: .55mm; }
+  li b { font-weight: bold; }
+  .bi p { margin: 0 0 .9mm 0; }
+  .bi p:last-child { margin-bottom: 0; }
+  .kv { color: #000; font-weight: bold; white-space: nowrap; }
+  .dur { background: #000; color: #fff; padding: .5mm 1.1mm; font-weight: bold;
+         font-size: 5.8pt; letter-spacing: .4px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 6pt; }
+  th { background: #000; color: #fff; text-align: left; padding: .8mm 1.2mm;
+       font-size: 5.7pt; text-transform: uppercase; letter-spacing: .3px; }
+  td { border-bottom: .4pt solid #bbb; padding: .72mm 1.2mm; vertical-align: top; }
+  td.v { font-weight: bold; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+
+  .dip { position: absolute; bottom: 3.2mm; left: 5mm; right: 5mm;
+         border-top: .4pt solid #999; padding-top: 1mm;
+         font-size: 5.2pt; color: #555; display: flex; justify-content: space-between; }
+</style></head><body>
+
+<!-- ====================== ÖN YÜZ ====================== -->
+<div class="kart">
+  <div class="bas">
+    <h1>MOTOR ARIZASI · İLK 5 DAKİKA</h1>
+    <div class="s">Önce bak · sonra ölç · en son dokun</div>
+  </div>
+  <div class="plaka">WEG W22 IE3 15 kW · <b>In = 28,3 A</b> (400 V Δ) · 1475 d/dk · 6309 ZZ C3 / 6209 ZZ C3</div>
+
+  <div class="blok">
+    <div class="bb"><span>1 · ISINIYOR</span><em>PTC ya da termik attı · gövde her zamankinden sıcak</em></div>
+    <div class="bi">
+      <p><b>Bak:</b> fan ızgarası ve kanatçıklar kirli mi, hava girişinin önü açık mı?
+        Termik röle ayarı <span class="kv">28,3 A</span> mı, yukarı mı çekilmiş?</p>
+      <p><b>Ölç (çalışırken):</b> fan girişinde hava <span class="kv">≤ 40 °C</span> ·
+        üç faz akımı <span class="kv">≤ 28,3 A</span>, dengesizlik <span class="kv">≤ %10</span> ·
+        gerilim <span class="kv">380–420 V</span>, dengesizlik <span class="kv">≤ %1</span></p>
+      <p><b>Durdur, kilitle, soğut:</b> PTC devresi <span class="kv">60–750 Ω</span> ve kayıttaki
+        değerle aynı mı? (megger uygulanmaz) · ızgarayı ve kanatçıkları temizle</p>
+    </div>
+  </div>
+
+  <div class="blok">
+    <div class="bb"><span>2 · TİTREŞİYOR</span><em>&gt; 4,5 mm/s = DURDUR</em></div>
+    <div class="bi">
+      <p><b>Bak, dinle:</b> yatak sesi (ıslık, öğütme) · kaplin · gevşemiş cıvata izi</p>
+      <p><b>Ölç (çalışırken):</b> titreşim ve yatak sıcaklığı · spektrum: <b>1×</b> dengesizlik,
+        <b>2×</b> kaçıklık, <b>100 Hz</b> elektriksel</p>
+      <p><b>Durdur, kilitle:</b> ayak ve yatak kapağı cıvataları (tork) · kaplin elemanı ·
+        ayak altı boşluğu <span class="kv">≤ 0,05 mm</span> · fan: kanat, sıkılık, birikinti</p>
+      <p>Yataklar kapalı tiptir (ZZ): gres basılmaz, yatak değiştirilir.</p>
+    </div>
+  </div>
+
+  <div class="blok">
+    <div class="bb"><span>3 · AKIM YÜKSEK</span><em>&gt; 31,1 A sürekli</em></div>
+    <div class="bi">
+      <p><b>Önce ölçümü doğrula:</b> akım trafosu oranı ve pens kademesi doğru mu?
+        Kalkıştan <span class="kv">≥ 5 dk</span> geçti mi?</p>
+      <p><b>Ölç (çalışırken):</b> üç fazı ayrı ayrı; biri sıfırsa <b>faz kaybı</b> ·
+        gerilim <span class="kv">380–420 V</span>, dengesizlik <span class="kv">≤ %1</span> ·
+        yük arttı mı? Radyal pompada <b>vana açıldıkça motor yüklenir</b></p>
+      <p><b>Durdur, kilitle:</b> mil elle serbest dönüyor mu?</p>
+    </div>
+  </div>
+
+  <div class="blok" style="border-width:1.3pt">
+    <div class="bb"><span>DOKUNMADAN ÖNCE</span><em>kilitle · etiketle</em></div>
+    <div class="bi"><p>Çalışan motorda yalnızca yetkili kişi ölçüm alır. Kapak açmadan, klemense
+      ya da mile dokunmadan önce: enerjiyi ayırıcıdan kes &rarr; ayırıcıyı açık konumda
+      <b>kilitle</b> &rarr; <b>etiketle</b> &rarr; gerilim yokluğunu <b>ölç</b>. Pompa tarafında iş varsa vanalar
+      kapalı, basınç boşaltılmış olmalı.</p></div>
+  </div>
+
+  <div class="dip"><span>BKM-AM-01 · Rev. 2 · ÖN</span><span>devamı arka yüzde</span></div>
+</div>
+
+<!-- ====================== ARKA YÜZ ====================== -->
+<div class="kart">
+  <div class="bas">
+    <h1>EŞİKLER VE FREKANSLAR</h1>
+    <div class="s">Ölçtüğün değeri buradan karşılaştır</div>
+  </div>
+
+  <table>
+    <tr><th colspan="3">TİTREŞİM · ISO 20816-3, Grup 2, rijit destek, radyal (mm/s RMS)</th></tr>
+    <tr><td class="v">≤ 1,4</td><td>Bölge A</td><td>Yeni devreye alınmış</td></tr>
+    <tr><td class="v">&gt; 1,4 · ≤ 2,8</td><td>Bölge B</td><td>Sürekli işletmeye uygun · kaydet</td></tr>
+    <tr><td class="v">&gt; 2,8 · ≤ 4,5</td><td>Bölge C</td><td>İş emri aç · planlı müdahale</td></tr>
+    <tr><td class="v">&gt; 4,5</td><td>Bölge D</td><td><span class="dur">DURDUR</span></td></tr>
+  </table>
+
+  <table style="margin-top:1.3mm">
+    <tr><th colspan="3">TİTREŞİM SPEKTRUMU · 1× = 24,6 Hz</th></tr>
+    <tr><td class="v">24,6 Hz</td><td>1×</td><td>Dengesizlik (balans)</td></tr>
+    <tr><td class="v">49,2 Hz</td><td>2×</td><td>Eksen kaçıklığı · gevşeklik</td></tr>
+    <tr><td class="v">73,8 Hz+</td><td>3×, 4×…</td><td>Mekanik gevşeklik</td></tr>
+    <tr><td class="v">100 Hz</td><td>2 × f<sub>şebeke</sub></td><td>Elektriksel · 4× (98,3 Hz) ile karıştırma</td></tr>
+    <tr><td class="v">22,9 / 26,3</td><td>1× ± 1,67 Hz</td><td>Rotor kafesi</td></tr>
+    <tr><td class="v">yatak</td><td>BPFO / BPFI</td><td>Üretici verisi · kaba: 0,4·Z·1× / 0,6·Z·1×</td></tr>
+  </table>
+
+  <table style="margin-top:1.3mm">
+    <tr><th colspan="3">AKIM SPEKTRUMU</th></tr>
+    <tr><td class="v">48,3 / 51,7</td><td>50 ± 2·s·f</td><td>Rotor kafesi · yük ≥ %75, gerçek kaymayla hesapla</td></tr>
+  </table>
+
+  <table style="margin-top:1.3mm">
+    <tr><th colspan="3">DİĞER KABUL KRİTERLERİ</th></tr>
+    <tr><td class="v">28,3 A</td><td>Anma akımı</td><td>Termik röle ayarı da bu · üstü değil</td></tr>
+    <tr><td class="v">≤ %10</td><td>Akım dengesizliği</td><td>100 × en büyük sapma / ortalama</td></tr>
+    <tr><td class="v">380–420 V</td><td>Faz-faz gerilim</td><td>IEC 60034-1 Bölge A</td></tr>
+    <tr><td class="v">≤ %1</td><td>Gerilim dengesizliği</td><td>Aynı formül</td></tr>
+    <tr><td class="v">≥ 5 MΩ</td><td>Yalıtım, 40 °C'ye düzeltilmiş</td><td>500 V DC, 1 dk · sonra 4 dk toprakla, boşalt</td></tr>
+    <tr><td class="v">60–750 Ω</td><td>PTC (3 seri, soğuk)</td><td>Kayıttaki değerle karşılaştır</td></tr>
+    <tr><td class="v">≤ 0,09 · ≤ 0,07</td><td>Hizalama</td><td>mm · mm/100 mm; kaplin üreticisi değeri öncelikli</td></tr>
+    <tr><td class="v">≤ 40 °C</td><td>Soğutma havası</td><td>Fan girişinde</td></tr>
+    <tr><td class="v">&gt; 4 s ise</td><td>Kalkış süresi</td><td>Röle eğrisiyle karşılaştır</td></tr>
+  </table>
+
+  <table style="margin-top:1.3mm">
+    <tr><th colspan="2">NE ZAMAN DURDUR · NE ZAMAN İŞ EMRİ</th></tr>
+    <tr><td class="v"><span class="dur">DURDUR</span></td><td>Titreşim &gt; 4,5 mm/s (Bölge D)</td></tr>
+    <tr><td class="v"><span class="dur">DURDUR</span></td><td>Faz kaybı · yanık kokusu · duman</td></tr>
+    <tr><td class="v"><span class="dur">ÇALIŞTIRMA</span></td><td>40 °C'ye düzeltilmiş yalıtım &lt; 5 MΩ · PTC köprülü · röle ayarı &gt; 28,3 A</td></tr>
+    <tr><td class="v">İŞ EMRİ</td><td>Titreşim &gt; 2,8 ve ≤ 4,5 mm/s (Bölge C)</td></tr>
+    <tr><td class="v">İŞ EMRİ</td><td>Akım &gt; 31,1 A sürekli · akım dengesizliği &gt; %10</td></tr>
+  </table>
+
+  <div class="dip"><span>BKM-AM-01 · Rev. 2 · ARKA</span><span>Eşikler referans motora göredir</span></div>
+</div>
+
+</body></html>

@@ -1,0 +1,48 @@
+(version 1)
+
+# SEBEKE <-> SELV yalitim koordinasyonu (IEC 60664-1)
+#   230/400 V, asiri gerilim kategorisi III, kirlilik derecesi 2,
+#   malzeme grubu IIIa -> anma darbe dayanimi 4 kV
+#   takviyeli yalitim: bosluk >= 5,5 mm
+# Kural yalnizca sebeke neti ile sebeke-disi net arasinda uygulanir.
+(rule "sebeke-selv-takviyeli-yalitim"
+    (condition "A.NetClass == 'Sebeke' && B.NetClass != 'Sebeke'")
+    (constraint clearance (min 5.5mm)))
+
+# Sebeke netlerinin kendi arasinda: faz-faz, ayni bolge icinde
+(rule "sebeke-ici-bosluk"
+    (condition "A.NetClass == 'Sebeke' && B.NetClass == 'Sebeke'")
+    (constraint clearance (min 0.4mm)))
+
+# Sebeke iletkeni IC KATMANA girmez.
+#   Ic katmanlar iki SELV dis katmanin arasinda; oraya gomulen bir sebeke
+#   izi gozle denetlenemez ve yalitim yalnizca duzlemin geri cekilmesine
+#   kalir. Otomatik yonlendirici birakilsa oraya koyuyor - bu kural onu
+#   hata olarak bildirir. Sebeke izleri elle cizilir.
+(rule "sebeke-ic-katmanda-olmaz"
+    (layer inner)
+    (condition "A.NetClass == 'Sebeke'")
+    (constraint disallow track via))
+
+# IZOLE BOLGE <-> geri kalan bakir
+#   Her izole bolgenin netleri kendi "Izole_<toprak>" sinifinda. Baska
+#   sinifla aralarindaki en az bakir acikligi:
+#   - PTC bolgesi (ISOGND) 8 mm. PTC sargiya gomulu; sargi-PTC yalitimi
+#     delinirse bolge sebeke potansiyeline cikar. 230/400 V, asiri gerilim
+#     kategorisi III, KD2, malzeme IIIa -> takviyeli yalitim: yuzeysel
+#     kacak 2 x 4,0 = 8,0 mm, hava araligi 5,5 mm (IEC 60664-1). Izolator
+#     (ISOW7744, DFM kilif) de 8 mm sinifi; ayak izi ona gore daraltildi.
+#   - RS-485 hat tarafi 3 mm: iki tarafi da SELV, yalnizca islevsel
+#     yalitim (toprak dongusu, ortak mod).
+#   Kural hedefin 0,05 mm ustunde yazildi; dolgu tam sinira dayanmasin.
+#   Bos bacaklar ("unconnected-*") muaf: izolatorun izole tarafindaki
+#   kullanilmayan bir cikis bacagi zaten izole tarafin parcasi.
+(rule "izole-ada-ISOGND"
+    (condition "A.NetClass == 'Izole_ISOGND' && A.NetClass != B.NetClass && B.NetClass != 'Sebeke' && B.NetName != 'unconnected-*'")
+    (constraint clearance (min 8.05mm)))
+(rule "izole-ada-MB_ISOGND"
+    (condition "A.NetClass == 'Izole_MB_ISOGND' && A.NetClass != B.NetClass && B.NetClass != 'Sebeke' && B.NetName != 'unconnected-*'")
+    (constraint clearance (min 3.05mm)))
+(rule "izole-ada-SH_ISOGND"
+    (condition "A.NetClass == 'Izole_SH_ISOGND' && A.NetClass != B.NetClass && B.NetClass != 'Sebeke' && B.NetName != 'unconnected-*'")
+    (constraint clearance (min 3.05mm)))

@@ -1,0 +1,13 @@
+(version 1)
+
+# IZOLE BOLGE <-> geri kalan bakir
+#   Her izole bolgenin netleri kendi "Izole_<toprak>" sinifinda. Baska
+#   sinifla aralarindaki en az bakir acikligi:
+#   - RS-485 hat tarafi 2 mm: iki tarafi da SELV, yalnizca islevsel
+#     yalitim (toprak dongusu, ortak mod).
+#   Kural hedefin 0,05 mm ustunde yazildi; dolgu tam sinira dayanmasin.
+#   Bos bacaklar ("unconnected-*") muaf: izolatorun izole tarafindaki
+#   kullanilmayan bir cikis bacagi zaten izole tarafin parcasi.
+(rule "izole-ada-BUS_GND"
+    (condition "A.NetClass == 'Izole_BUS_GND' && A.NetClass != B.NetClass && B.NetClass != 'Sebeke' && B.NetName != 'unconnected-*'")
+    (constraint clearance (min 2.05mm)))

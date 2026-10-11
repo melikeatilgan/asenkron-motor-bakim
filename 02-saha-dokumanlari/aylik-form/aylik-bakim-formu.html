@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<title>Aylık Bakım Kontrol Formu</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 9mm 9mm 9mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, "Helvetica Neue", sans-serif; font-size: 7.3pt;
+         color: #000; background: #fff; margin: 0; line-height: 1.25; }
+  h1 { font-size: 12pt; margin: 0 0 1mm 0; letter-spacing: .2px; }
+  .ust { display: flex; justify-content: space-between; align-items: flex-end;
+         border-bottom: 1.6pt solid #000; padding-bottom: 1.5mm; margin-bottom: 2mm; }
+  .alt1 { font-size: 7pt; color: #333; }
+  .rev { font-size: 6.6pt; text-align: right; line-height: 1.5; }
+
+  .kimlik { display: grid; grid-template-columns: repeat(4, 1fr);
+            border: .7pt solid #000; margin-bottom: 2mm; }
+  .kk { border-right: .4pt solid #999; border-bottom: .4pt solid #999;
+        padding: 1mm 1.4mm; }
+  .kk:nth-child(4n) { border-right: none; }
+  .kk:nth-child(n+5) { border-bottom: none; }
+  .ke { display: block; font-size: 6.1pt; color: #555; text-transform: uppercase;
+        letter-spacing: .3px; }
+  .kd { display: block; font-weight: bold; font-size: 7.4pt; }
+
+  .meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm;
+          margin-bottom: 2.5mm; }
+  .mf { border-bottom: .7pt solid #000; padding-bottom: 3.8mm; font-size: 6.4pt;
+        color: #555; text-transform: uppercase; letter-spacing: .3px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  thead { display: table-header-group; }
+  tr { page-break-inside: avoid; }
+  th { background: #000; color: #fff; font-size: 6.5pt; text-transform: uppercase;
+       letter-spacing: .4px; padding: 1.1mm .8mm; text-align: left;
+       border-right: .4pt solid #fff; }
+  th:last-child { border-right: none; }
+  td { border-bottom: .4pt solid #bbb; padding: .45mm .8mm; vertical-align: top; }
+  tr.grup td { background: #e8e8e8; border-top: .9pt solid #000;
+               border-bottom: .9pt solid #000; padding: .8mm .8mm; }
+  .gad { font-weight: bold; font-size: 7.2pt; letter-spacing: .6px; }
+  .gnot { font-size: 6.4pt; color: #444; font-style: italic; margin-top: .3mm; }
+
+  .no { width: 5mm;  text-align: right; color: #888; font-size: 6.4pt; }
+  .kod{ width: 9mm;  font-weight: bold; font-family: "Consolas", monospace;
+        font-size: 6.9pt; }
+  .md { width: 32mm; font-weight: bold; }
+  .yt { width: 46mm; color: #333; }
+  .kr { width: 47mm; }
+  .pr { width: 7mm; text-align: center; font-weight: bold; font-size: 6.3pt; }
+  .p-A  { background: #000; color: #fff; }
+  .p-3A { background: #777; color: #fff; }
+  .p-Y  { background: #ccc; }
+  .p-AR { background: #fff; border: .4pt solid #999; }
+  .ev { width: 10mm; font-family: "Consolas", monospace; font-size: 6pt;
+        color: #444; border-left: .4pt solid #bbb; }
+  .ol { width: 14mm; border-left: .4pt solid #bbb; }
+  .uy { width: 12mm; border-left: .4pt solid #bbb; text-align: center;
+        white-space: nowrap; }
+  .uy span { display: inline-block; width: 4mm; height: 4mm; line-height: 3.7mm;
+             border: .6pt solid #000; font-size: 6.2pt; margin: 0 .3mm; color: #999; }
+
+  .son { page-break-inside: avoid; }
+  .periyot { margin-top: 1.5mm; font-size: 6.5pt; color: #333; }
+  .aksiyon { margin-top: 2mm; border: .7pt solid #000; }
+  .aksiyon .ab { background: #000; color: #fff; font-size: 6.6pt; padding: 1mm 1.4mm;
+                 text-transform: uppercase; letter-spacing: .5px; font-weight: bold; }
+  .aksiyon .ar { border-bottom: .4pt solid #999; height: 5.2mm; }
+  .aksiyon .ar:last-child { border-bottom: none; }
+
+  .imza { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm;
+          margin-top: 4.5mm; }
+  .imf { border-top: .7pt solid #000; padding-top: 1mm; font-size: 6.4pt;
+         color: #555; text-transform: uppercase; letter-spacing: .3px; }
+  .dip { margin-top: 2mm; padding-top: 1mm; border-top: .4pt solid #bbb;
+         font-size: 6.2pt; color: #555; }
+</style></head><body>
+
+<div class="ust">
+  <div>
+    <h1>ASENKRON MOTOR AYLIK BAKIM KONTROL FORMU</h1>
+    <div class="alt1">Arıza ağacına dayalı kontrol listesi &nbsp;·&nbsp;
+      47 madde &nbsp;·&nbsp; iki sayfa</div>
+  </div>
+  <div class="rev">Form no: <b>BKM-AM-01</b><br>Rev. 2 &nbsp;·&nbsp; 2026-10</div>
+</div>
+
+<div class="kimlik"><div class="kk"><span class="ke">Üretici / tip</span><span class="kd">WEG W22 IE3 (12863072)</span></div><div class="kk"><span class="ke">Anma gücü</span><span class="kd">15 kW, S1</span></div><div class="kk"><span class="ke">Anma akımı In</span><span class="kd">28,3 A (400 V Δ)</span></div><div class="kk"><span class="ke">Anma devri</span><span class="kd">1475 d/dk (4 kutup)</span></div><div class="kk"><span class="ke">Gövde / mil yük.</span><span class="kd">160L / 160 mm</span></div><div class="kk"><span class="ke">Yalıtım / koruma</span><span class="kd">F sınıfı / IP55</span></div><div class="kk"><span class="ke">Yataklar</span><span class="kd">DE 6309 ZZ C3 · NDE 6209 ZZ C3</span></div><div class="kk"><span class="ke">Titreşim sınıfı</span><span class="kd">ISO 20816-3 Grup 2, rijit destek</span></div></div>
+
+<div class="meta">
+  <div class="mf">Motor etiket no / konum</div>
+  <div class="mf">Tarih</div>
+  <div class="mf">Kontrol eden</div>
+  <div class="mf">Çalışma saati (h)</div>
+</div>
+
+<table>
+  <thead><tr>
+    <th></th><th>Kod</th><th>Kontrol maddesi</th><th>Yöntem / alet</th>
+    <th>Kabul kriteri</th><th>P</th><th>Olay</th><th>Ölçülen</th><th>U / X</th>
+  </tr></thead>
+  <tbody>
+<tr class="grup"><td colspan="9"><span class="gad">KORUMA</span><div class="gnot">T1'in bütün kesme kümelerinde bu gruptaki olaylardan en az biri yer alır. Bu yüzden form bunlarla başlar.</div></td></tr>
+<tr><td class="no">1</td><td class="kod">P-01</td><td class="md">PTC devresi soğuk direnci</td><td class="yt">Motor soğukken, panoda PTC rölesi klemenslerinde, uçlar ayrılarak; düşük gerilimli ohmmetre (megger <b>uygulanmaz</b>)</td><td class="kr">60–750 Ω ve aynı sıcaklıktaki devreye alma kaydıyla uyumlu. Belirgin düşüş: köprü şüphesi. Sonsuz: kopuk</td><td class="pr p-A">A</td><td class="ev">B1.06</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">2</td><td class="kod">P-02</td><td class="md">PTC rölesi işlev testi</td><td class="yt">Röle girişine ayarlı direnç bağlanır: açma, açık devre ve varsa kısa devre algılaması denenir</td><td class="kr">Röle föyündeki dirençlerde açıyor; kontaktör bırakıyor</td><td class="pr p-3A">3A</td><td class="ev">B1.07</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">3</td><td class="kod">P-03</td><td class="md">Termik röle akım ayarı</td><td class="yt">Röle skalası, gözle</td><td class="kr">Ayar = 28,3 A (In). Üstü kabul edilmez</td><td class="pr p-A">A</td><td class="ev">B1.08</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">4</td><td class="kod">P-04</td><td class="md">Termik röle açma sınıfı</td><td class="yt">Röle etiketi ve açma eğrisi</td><td class="kr">Class 10; eğri motorun kalkış süresi ve kilitli rotor dayanımıyla (sıcakta 11 s) karşılaştırılmış</td><td class="pr p-Y">Y</td><td class="ev">B1.09</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">5</td><td class="kod">P-05</td><td class="md">Termik röle test düğmesi</td><td class="yt">Test düğmesi; yardımcı kontak ve kumanda devresi</td><td class="kr">Kontaktör bırakıyor. Akım-zaman eğrisini sınamaz</td><td class="pr p-A">A</td><td class="ev">B1.10</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">6</td><td class="kod">P-06</td><td class="md">Kontaktör ana kontakları</td><td class="yt">Bobin enerjisiz, motor uçları ayrılmış; kutup başına süreklilik</td><td class="kr">Üç kutup da açık (yapışma yok)</td><td class="pr p-3A">3A</td><td class="ev">B1.11</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr class="grup"><td colspan="9"><span class="gad">ELEKTRİKSEL</span><div class="gnot">Akım, gerilim, termal görüntü, harmonik ve spektrum ölçümleri motor rejimdeyken, kalkıştan en az 5 dakika sonra alınır. Tork, yalıtım ve direnç kontrolleri enerji kesik ve kilitliyken yapılır.</div></td></tr>
+<tr><td class="no">7</td><td class="kod">E-01</td><td class="md">Ölçüm koşulu</td><td class="yt">Kalkıştan sonra geçen süre ve yük durumu kaydedilir</td><td class="kr">≥ 5 dk, normal işletme yükü</td><td class="pr p-A">A</td><td class="ev">Ö4</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">8</td><td class="kod">E-02</td><td class="md">Üç faz akımı</td><td class="yt">Pens ampermetre, L1 / L2 / L3 ayrı ayrı</td><td class="kr">Her faz ≤ 28,3 A; dengesizlik (100 × en büyük sapma / ortalama) ≤ %10. &gt; 31,1 A sürekli: iş emri</td><td class="pr p-A">A</td><td class="ev">T3<br>B3.11<br>Ö3</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">9</td><td class="kod">E-03</td><td class="md">Faz-faz gerilimleri ve dengesizlik</td><td class="yt">Multimetre; dengesizlik = 100 × en büyük sapma / ortalama</td><td class="kr">380–420 V <b>ve</b> dengesizlik ≤ %1</td><td class="pr p-A">A</td><td class="ev">B3.12<br>B3.13</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">10</td><td class="kod">E-04</td><td class="md">Akım ölçü devresi oranı</td><td class="yt">Röle / analizör ayarı ile akım trafosu etiketi</td><td class="kr">Aynı</td><td class="pr p-3A">3A</td><td class="ev">Ö1</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">11</td><td class="kod">E-05</td><td class="md">Pens ampermetre kalibrasyonu</td><td class="yt">Kalibrasyon etiketi</td><td class="kr">Geçerli</td><td class="pr p-Y">Y</td><td class="ev">Ö2</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">12</td><td class="kod">E-06</td><td class="md">Klemens bağlantıları</td><td class="yt">Yük altında termal kamera; ya da enerjisiz ve kilitliyken tork anahtarı</td><td class="kr">Aynı yükte fazlar arası sıcaklık farkı &lt; 4 K; tork üretici değerinde</td><td class="pr p-3A">3A</td><td class="ev">B3.15</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">13</td><td class="kod">E-07</td><td class="md">Gerilim harmonikleri (analizör varsa)</td><td class="yt">Güç kalitesi analizörü, motor klemensinde</td><td class="kr">Gerilim THD ≤ %8 (tarama eşiği; aşılırsa bir haftalık kayıt alınır)</td><td class="pr p-Y">Y</td><td class="ev">B3.14</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">14</td><td class="kod">E-08</td><td class="md">Yalıtım direnci</td><td class="yt">Enerji kesik ve kilitli, motor kablosundan ayrılmış. 500 V DC, 1 dk, sargı–gövde. <b>Test sonrası sargı en az 4 dk topraklanarak boşaltılır</b></td><td class="kr">40 °C'ye düzeltilmiş ≥ 5 MΩ (IEEE 43). Sargı sıcaklığı kaydedilir</td><td class="pr p-Y">Y</td><td class="ev">KD</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">15</td><td class="kod">E-09</td><td class="md">Faz dirençleri</td><td class="yt">Enerji kesik ve kilitli; mikro-ohmmetre, köprüler sökük, üç faz</td><td class="kr">Dengesizlik (100 × en büyük sapma / ortalama) ≤ %2. Tarama testidir; şüphede darbe (surge) testi</td><td class="pr p-Y">Y</td><td class="ev">B3.08</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">16</td><td class="kod">E-10</td><td class="md">Akım imza analizi</td><td class="yt">Akım spektrumu, yük ≥ %75; 50 Hz ± 2·s·f yan bantları (anma kaymasında 48,3 / 51,7 Hz)</td><td class="kr">Yan bant ana bileşenin ≥ 45 dB altında; eğilim izlenir</td><td class="pr p-Y">Y</td><td class="ev">B3.09<br>B3.10</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr class="grup"><td colspan="9"><span class="gad">TİTREŞİM</span><div class="gnot">DE ve NDE yatak gövdelerinde yatay ve düşey ölçülür; karar en yüksek radyal okumaya göre verilir. Eksenel ölçüm eğilim için kaydedilir.</div></td></tr>
+<tr><td class="no">17</td><td class="kod">V-01</td><td class="md">Titreşim hızı, RMS (10–1000 Hz)</td><td class="yt">Titreşim ölçer; 4 radyal, 2 eksenel nokta</td><td class="kr">≤ 2,8 mm/s. &gt; 2,8 ve ≤ 4,5: iş emri. &gt; 4,5: <b>durdur</b>. Önceki ölçüme göre 0,7 mm/s'den büyük değişim incelenir</td><td class="pr p-A">A</td><td class="ev">T2</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">18</td><td class="kod">V-02</td><td class="md">Titreşim spektrumu</td><td class="yt">FFT, çözünürlük ≤ 0,5 Hz: 1×, 2×, 100 Hz ve yatak frekansları</td><td class="kr">Aynı yükte önceki kayda göre yeni tepe ya da belirgin artış yok</td><td class="pr p-3A">3A</td><td class="ev">B2.02<br>B2.10<br>B2.19<br>B2.20</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">19</td><td class="kod">V-03</td><td class="md">Güç kesme testi (titreşim yüksekse)</td><td class="yt">Güç kesilir, 100 Hz bileşeni izlenir</td><td class="kr">Hemen kayboluyorsa elektriksel kaynak şüphesi. Tek başına karar verdirmez</td><td class="pr p-AR">AR</td><td class="ev">B2.19<br>B2.20</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">20</td><td class="kod">V-04</td><td class="md">Rezonans kontrolü</td><td class="yt">Darbe (bump) testi, motor dururken; doğal frekanslar ve sönüm kaydedilir</td><td class="kr">En düşük doğal frekans ≥ 30,7 Hz (rijit destek koşulu); 24,6 / 49,2 / 100 Hz'e %10'dan yakın doğal frekans yok; sönüm baz kayda göre belirgin azalmamış</td><td class="pr p-Y">Y</td><td class="ev">B2.17<br>B2.18</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr class="grup"><td colspan="9"><span class="gad">MEKANİK</span></td></tr>
+<tr><td class="no">21</td><td class="kod">M-01</td><td class="md">Ayak ve yatak kapağı cıvataları</td><td class="yt">Tork anahtarı</td><td class="kr">Üretici torku</td><td class="pr p-3A">3A</td><td class="ev">B2.13<br>B2.16</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">22</td><td class="kod">M-02</td><td class="md">Kaplin elemanı</td><td class="yt">Gözle: çatlak, aşınma, sertleşme</td><td class="kr">Hasar yok</td><td class="pr p-A">A</td><td class="ev">B2.04</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">23</td><td class="kod">M-03</td><td class="md">Serbest dönme</td><td class="yt">Enerji kesik ve kilitli; mil elle çevrilir</td><td class="kr">Takılma, sürtme sesi yok</td><td class="pr p-3A">3A</td><td class="ev">B3.02<br>B3.05<br>B3.06<br>B3.07</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">24</td><td class="kod">M-04</td><td class="md">Ayak altı boşluğu (soft foot)</td><td class="yt">Cıvata gevşetilirken komparatör ya da sentil</td><td class="kr">≤ 0,05 mm</td><td class="pr p-Y">Y</td><td class="ev">B2.14</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">25</td><td class="kod">M-05</td><td class="md">Eksen hizalaması</td><td class="yt">Lazer ya da komparatör; ayrıca sıcak duruşta (çalışma sıcaklığında durdurulup kilitlendikten hemen sonra)</td><td class="kr">Paralel ≤ 0,09 mm; açısal ≤ 0,07 mm/100 mm (kaplin üreticisinin değeri varsa o)</td><td class="pr p-3A">3A</td><td class="ev">B2.05<br>B2.07</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">26</td><td class="kod">M-06</td><td class="md">Boru zorlaması</td><td class="yt">Pompa izole ve basınçsız; flanş cıvataları gevşetilirken kaplinde komparatör</td><td class="kr">Mil kayması ≤ 0,05 mm</td><td class="pr p-Y">Y</td><td class="ev">B2.06</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">27</td><td class="kod">M-07</td><td class="md">Kaide ve grout</td><td class="yt">Gözle; çekiçle tıklatma</td><td class="kr">Çatlak yok, boşluk sesi yok</td><td class="pr p-3A">3A</td><td class="ev">B2.15</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">28</td><td class="kod">M-08</td><td class="md">Yatak yuvası ve muylu çapı</td><td class="yt">Sökümde mikrometre</td><td class="kr">Üretici toleransı</td><td class="pr p-AR">AR</td><td class="ev">B2.12</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">29</td><td class="kod">M-09</td><td class="md">Rotor ve stator yüzeyi</td><td class="yt">Sökümde gözle</td><td class="kr">Sürtme izi yok</td><td class="pr p-AR">AR</td><td class="ev">B3.06</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr class="grup"><td colspan="9"><span class="gad">YATAK</span><div class="gnot">Yataklar kapalı tiptir (ZZ) ve ömür boyu yağlıdır; sonradan gres basılmaz.</div></td></tr>
+<tr><td class="no">30</td><td class="kod">Y-01</td><td class="md">Yatak çalışma saati</td><td class="yt">Çalışma saati sayacı, bakım kaydı</td><td class="kr">Üretici değişim süresi içinde. Süre bilinmiyorsa doğrulanmadı yazılır; yatak durumu Y-02 ve V-02 ile izlenir</td><td class="pr p-A">A</td><td class="ev">B2.08</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">31</td><td class="kod">Y-02</td><td class="md">Yatak sıcaklığı ve sesi</td><td class="yt">Yatak gövdesinde temaslı termometre; dinleme çubuğu</td><td class="kr">Aynı yük ve ortamda önceki kayda göre artış eğilimi yok; düzensiz ses yok</td><td class="pr p-A">A</td><td class="ev">B2.08<br>B2.11<br>B3.07</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">32</td><td class="kod">Y-03</td><td class="md">Takılan yatağın tipi</td><td class="yt">Yatak etiketi</td><td class="kr">DE 6309 ZZ C3, NDE 6209 ZZ C3</td><td class="pr p-AR">AR</td><td class="ev">B2.09</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">33</td><td class="kod">Y-04</td><td class="md">Yatak montaj yöntemi</td><td class="yt">İş kaydı</td><td class="kr">Isıtarak ya da presle; çakma yok. Kuvvet sıkı geçen bilezikten (mile takarken iç bilezik)</td><td class="pr p-AR">AR</td><td class="ev">B2.10</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">34</td><td class="kod">Y-05</td><td class="md">Yatak kapağı ve mil keçesi</td><td class="yt">Gözle</td><td class="kr">Keçe yerinde ve hasarsız; su, toz girişi izi yok</td><td class="pr p-3A">3A</td><td class="ev">B2.11</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr class="grup"><td colspan="9"><span class="gad">SOĞUTMA</span></td></tr>
+<tr><td class="no">35</td><td class="kod">G-01</td><td class="md">Fan kapağı ızgarası</td><td class="yt">Gözle</td><td class="kr">Açık; toz, lif birikmesi yok</td><td class="pr p-A">A</td><td class="ev">B1.01</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">36</td><td class="kod">G-02</td><td class="md">Gövde soğutma kanatçıkları</td><td class="yt">Gözle</td><td class="kr">Kanat dipleri temiz</td><td class="pr p-A">A</td><td class="ev">B1.02</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">37</td><td class="kod">G-03</td><td class="md">Hava girişi önü</td><td class="yt">Gözle, şerit metre</td><td class="kr">Engel yok; üretici kılavuzundaki en az mesafe sağlanıyor</td><td class="pr p-A">A</td><td class="ev">B1.03</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">38</td><td class="kod">G-04</td><td class="md">Fan</td><td class="yt">Enerji kesik ve kilitli; fan kapağı sökülür</td><td class="kr">Kanatlar tam, fan milde sıkı, birikinti yok</td><td class="pr p-3A">3A</td><td class="ev">B2.01<br>B2.03</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">39</td><td class="kod">G-05</td><td class="md">Soğutma havası sıcaklığı</td><td class="yt">Termometre, fan girişinde</td><td class="kr">≤ 40 °C</td><td class="pr p-A">A</td><td class="ev">B1.04</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">40</td><td class="kod">G-06</td><td class="md">Rakım ve yük düşürme</td><td class="yt">Tesis rakımı ile motor föyü (bir kez, kayıt)</td><td class="kr">≤ 1000 m; üstündeyse yük düşürülmüş</td><td class="pr p-Y">Y</td><td class="ev">B1.05</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr class="grup"><td colspan="9"><span class="gad">YÜK VE İŞLETME</span></td></tr>
+<tr><td class="no">41</td><td class="kod">L-01</td><td class="md">Pompa çalışma noktası</td><td class="yt">Basma basıncı ve debi; pompa eğrisi</td><td class="kr">Üreticinin izin verdiği aralıkta; mil gücü ≤ 15 kW</td><td class="pr p-A">A</td><td class="ev">B3.01</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">42</td><td class="kod">L-02</td><td class="md">Salmastra</td><td class="yt">Damlatma, salmastra kutusu sıcaklığı</td><td class="kr">Yumuşak salmastra: üretici değerinde damlatma. Mekanik salmastra: sızıntı yok</td><td class="pr p-A">A</td><td class="ev">B3.03</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">43</td><td class="kod">L-03</td><td class="md">Kalkış sayısı ve görev çevrimi</td><td class="yt">Sayaç ya da operatör kaydı</td><td class="kr">Üreticinin izin verdiği saatlik kalkış sayısı içinde</td><td class="pr p-A">A</td><td class="ev">B3.16</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">44</td><td class="kod">L-04</td><td class="md">Kalkış süresi</td><td class="yt">Pens ampermetre ve kronometre</td><td class="kr">Termik röle kalkışta açmıyor. Süre kaydedilir; 4 s'den uzunsa röle eğrisiyle karşılaştırılır</td><td class="pr p-3A">3A</td><td class="ev">B3.17</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">45</td><td class="kod">L-05</td><td class="md">Akışkan yoğunluğu ve viskozitesi</td><td class="yt">Proses verisi</td><td class="kr">Pompa tasarım değerinde</td><td class="pr p-3A">3A</td><td class="ev">B3.04</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">46</td><td class="kod">L-06</td><td class="md">Pompa çarkı ve aşınma halkaları</td><td class="yt">Sökümde gözle</td><td class="kr">Sürtme izi yok</td><td class="pr p-AR">AR</td><td class="ev">B3.02</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+<tr><td class="no">47</td><td class="kod">L-07</td><td class="md">Frenleme</td><td class="yt">Kumanda şeması, gözlem</td><td class="kr">Ters akımla frenleme yok</td><td class="pr p-Y">Y</td><td class="ev">B3.18</td><td class="ol"></td><td class="uy"><span>U</span><span>X</span></td></tr>
+  </tbody>
+</table>
+
+<div class="son">
+<div class="periyot"><b>P = periyot:</b> <b>A</b> Aylık &nbsp;·&nbsp; <b>3A</b> Üç aylık &nbsp;·&nbsp; <b>Y</b> Yıllık &nbsp;·&nbsp; <b>AR</b> Arıza hâlinde / sökümde &nbsp;&nbsp;|&nbsp;&nbsp;
+  <b>U</b> = uygun, <b>X</b> = uygun değil (uygun olmayan her madde için aşağıya iş emri yazılır)</div>
+
+<div class="aksiyon">
+  <div class="ab">Uygun olmayan maddeler ve açılan iş emirleri</div>
+  <div class="ar"></div><div class="ar"></div><div class="ar"></div>
+</div>
+
+<div class="imza">
+  <div class="imf">Kontrol eden: ad, imza</div>
+  <div class="imf">Onaylayan: ad, imza</div>
+  <div class="imf">Bir sonraki kontrol tarihi</div>
+</div>
+
+<div class="dip">
+  Eşikler referans motorun föyünden, ISO 20816-3, IEC 60034-1, IEC 60947-4-1,
+  IEEE 43'ten ve kaynaklar belgesinde listelenen, bu çalışmada seçilen tarama eşiklerinden
+  oluşur; başka bir motorda yeniden hesaplanır. Olay sütunu: B kodları
+  <b>01-analiz</b> klasöründeki temel olaylar, T2 ve T3 tepe olayın kendisi, Ö ölçümün
+  geçerliliği, KD ağaçların kapsamı dışındaki standart kontrol. "Üretici değeri" isteyen
+  maddeler, değer forma yazılmadan uygun işaretlenmez. Önceki kayıtla karşılaştırılan
+  maddelerde önceki ölçüm yoksa bu ölçüm başlangıç kaydıdır: "Ölçülen" sütununa değerin
+  yanına "baz" yazılır. Sayısal sınırı olan kısım o gün de U / X ile işaretlenir; yalnız
+  eğilime bakan kısım varsa U / X boş kalır. Durdurma kuralları yine geçerlidir.
+  Her müdahaleden önce enerji ayırıcıdan kesilir, ayırıcı açık konumda kilitlenir ve
+  etiketlenir, gerilim yokluğu ölçülür.
+</div>
+</div>
+
+</body></html>

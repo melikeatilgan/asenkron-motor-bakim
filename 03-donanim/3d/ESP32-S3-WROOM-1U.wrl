@@ -1,0 +1,45 @@
+#VRML V2.0 utf8
+# ESP32-S3-WROOM-1U - basitlestirilmis gorsel model
+# Basitlestirilmis govde; mekanik kullanim icin degil
+
+Transform {
+  translation 0.0000 0.0197 0.1575
+  children [
+    Shape {
+      appearance Appearance { material Material {
+        diffuseColor 0.070 0.090 0.110
+        specularColor 0.200 0.200 0.200
+        shininess 0.20
+      } }
+      geometry Box { size 7.0866 7.5591 0.3150 }
+    }
+  ]
+}
+
+Transform {
+  translation 0.0000 -0.5118 0.7874
+  children [
+    Shape {
+      appearance Appearance { material Material {
+        diffuseColor 0.520 0.530 0.560
+        specularColor 0.350 0.350 0.350
+        shininess 0.35
+      } }
+      geometry Box { size 6.6929 6.1417 0.9449 }
+    }
+  ]
+}
+
+Transform {
+  translation 2.3622 2.9921 0.5610
+  children [
+    Shape {
+      appearance Appearance { material Material {
+        diffuseColor 0.800 0.680 0.300
+        specularColor 0.600 0.600 0.600
+        shininess 0.60
+      } }
+      geometry Box { size 1.0236 1.0236 0.4921 }
+    }
+  ]
+}

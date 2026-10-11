@@ -1,0 +1,278 @@
+(footprint "Relay_SPDT_Finder_34.51_Vertical_Fab"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Relay SPDT, Finder Type34.51, vertical/standing form, see https://gfinder.findernet.com/public/attachments/34/EN/S34USAEN.pdf")
+	(tags "Relay SPDT Finder")
+	(property "Reference" "REF**"
+		(at 10.25 -2.2 0)
+		(layer "F.Fab")
+		(uuid "93b97991-dd9a-41d0-9507-f87b11d61bd2")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Relay_SPDT_Finder_34.51_Vertical_Fab"
+		(at 9.15 4.8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7d835098-bc95-426a-8b0d-1d67c8213e44")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f314a2c7-4418-4ceb-aa46-c5d40374c6ea")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3b9f75a7-4937-4470-9a11-d699fc6e6ab0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(clearance 0)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -5.1 -1.55)
+		(end -5.1 3.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1b777dde-7210-40a6-b79a-6bb91abbadc1")
+	)
+	(fp_line
+		(start -5.1 -1.55)
+		(end 23.4 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "dd2bba14-e355-4a72-9165-b33046de1e58")
+	)
+	(fp_line
+		(start 23.4 3.95)
+		(end -5.1 3.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f75d59e5-6f14-4105-9fd9-177bef88f92b")
+	)
+	(fp_line
+		(start 23.4 3.95)
+		(end 23.4 -1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "36fe4fe7-c13c-40b8-a3b5-381fd16d5b4b")
+	)
+	(fp_line
+		(start -5.15 4)
+		(end -5.15 2.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "edc39f28-465c-48cd-8c94-53bd5a92985f")
+	)
+	(fp_line
+		(start -4.95 -1.4)
+		(end 23.25 -1.4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a95e10d6-cb61-4b66-a126-90a6667c9bd4")
+	)
+	(fp_line
+		(start -4.95 3.8)
+		(end -4.95 -1.4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fbc16ea9-b279-463a-91a7-f4a995219f75")
+	)
+	(fp_line
+		(start -4.85 -1.3)
+		(end 23.15 -1.3)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f90de03c-4553-44f6-8f71-574b894ab569")
+	)
+	(fp_line
+		(start -4.85 2.7)
+		(end -4.85 -1.3)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a393df0a-f4af-4a2d-b193-bd576fdcbdec")
+	)
+	(fp_line
+		(start -3.85 3.7)
+		(end -4.85 2.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "38442c3d-e8c3-41ea-a350-0b8f005c5edc")
+	)
+	(fp_line
+		(start -3.85 4)
+		(end -5.15 4)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "50e8de28-596a-431b-8239-894830c7655a")
+	)
+	(fp_line
+		(start 23.15 -1.3)
+		(end 23.15 3.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "90978463-4bc1-4841-a4a4-18eafa447c9d")
+	)
+	(fp_line
+		(start 23.15 3.7)
+		(end -3.85 3.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67165c2a-7b55-4fdb-b5b8-cce30c61d47e")
+	)
+	(fp_line
+		(start 23.25 -1.4)
+		(end 23.25 3.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6d5fed08-8dfb-4568-aff1-249798843069")
+	)
+	(fp_line
+		(start 23.25 3.8)
+		(end -4.95 3.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "066d375f-4e51-42c4-a977-e11708ea4504")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 10.25 2.4 0)
+		(layer "F.Fab")
+		(uuid "ba86359d-8fa1-43ac-b0e7-952758c43bbf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "11" thru_hole circle
+		(at 16.25 0)
+		(size 2.4 2.4)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(clearance 0)
+		(uuid "ecc3cbfd-79be-4f31-85fd-c27351a4ef22")
+	)
+	(pad "12" thru_hole circle
+		(at 11.25 0)
+		(size 2.4 2.4)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(clearance 0)
+		(uuid "22c48b65-b488-4adb-af5c-a4b659133e50")
+	)
+	(pad "14" thru_hole circle
+		(at 21.25 0)
+		(size 2.4 2.4)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(clearance 0)
+		(uuid "9a751058-d75d-4168-94e2-73b8d418dede")
+	)
+	(pad "A1" thru_hole rect
+		(at 0 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(clearance 0)
+		(uuid "ebdace8d-9fce-45d8-8094-eb22e9693fd1")
+	)
+	(pad "A2" thru_hole circle
+		(at -3.75 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(clearance 0)
+		(uuid "1d4b3ff5-1360-4f7b-a040-9f750601a02f")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Relay_THT.3dshapes/Relay_SPDT_Finder_34.51_Vertical.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

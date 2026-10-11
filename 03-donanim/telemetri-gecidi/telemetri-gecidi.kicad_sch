@@ -1,0 +1,164 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "fb8c0ea0-3f5c-4723-9082-9224b504118b")
+	(paper "A3")
+	(title_block
+		(title "Telemetri Gecidi")
+		(date "2026-10-11")
+		(rev "C")
+		(company "Melike Atılgan")
+	)
+	(lib_symbols)
+	(text "AYRI KART: radyo, olcum kartinin uzerinde degil"
+		(exclude_from_sim no)
+		(at 25.4 43.18 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+			)
+			(justify left bottom)
+		)
+		(uuid "56cb2f51-3d5b-431d-b454-a05eaf77bd13")
+	)
+	(text "Ana karttan Modbus RTU okur, MQTT ile aga tasir"
+		(exclude_from_sim no)
+		(at 25.4 38.1 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+			)
+			(justify left bottom)
+		)
+		(uuid "687b7073-9bdc-4b23-b625-5fd1f01a2670")
+	)
+	(text "ESP32-S3 - MQTT gecidi"
+		(exclude_from_sim no)
+		(at 27.94 96.52 0)
+		(effects
+			(font
+				(size 1.3 1.3)
+			)
+			(justify left bottom)
+		)
+		(uuid "bb99858a-9e77-4ff1-a301-d0d394953823")
+	)
+	(text "Guc ve izole RS-485 - panodan Modbus"
+		(exclude_from_sim no)
+		(at 27.94 68.58 0)
+		(effects
+			(font
+				(size 1.3 1.3)
+			)
+			(justify left bottom)
+		)
+		(uuid "e94f6acf-d894-40d5-9ad8-48b71ffdaa13")
+	)
+	(text "TELEMETRI GECIDI"
+		(exclude_from_sim no)
+		(at 25.4 30.48 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd946631-61b3-4034-91ba-fe1d97b14e1a")
+	)
+	(sheet
+		(at 25.4 58.42)
+		(size 127 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "04349b8c-599e-4e1f-a94a-1862c181da8e")
+		(property "Sheetname" "01-guc-rs485"
+			(at 25.4 57.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "01-guc-rs485.kicad_sch"
+			(at 25.4 76.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "telemetri-gecidi"
+				(path "/fb8c0ea0-3f5c-4723-9082-9224b504118b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 86.36)
+		(size 127 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7f240566-4406-4582-9210-064b8848bba7")
+		(property "Sheetname" "02-esp32"
+			(at 25.4 85.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "02-esp32.kicad_sch"
+			(at 25.4 104.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "telemetri-gecidi"
+				(path "/fb8c0ea0-3f5c-4723-9082-9224b504118b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
